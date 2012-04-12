@@ -1,3 +1,0 @@
-
-_4drot
-_4drot.jar,core.jar

@@ -5,3 +5,8 @@
 *.class
 *.so
 *.dll
+
+
+
+#compiled applications#
+*.windows
