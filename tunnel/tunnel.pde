@@ -1,4 +1,3 @@
-int detail = 2;
 PImage img;
 float[] tunnel;
 float[] tunnelv;
@@ -48,14 +47,6 @@ void setup() {
     
     inittunnel();
 } 
-
-void keyPressed() {
-    if(keyCode == UP)
-        detail++;
-    if(keyCode == DOWN)
-        detail--;
-    constrain(detail, 2, 10);
-}
 
 void drawtunnel() {
   img.loadPixels();
