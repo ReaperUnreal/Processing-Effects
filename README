@@ -1,0 +1,7 @@
+These are all some fun effects I've come up with in processing.
+
+4drot:
+This is a unit hypercube rotating on 4 different axes, which is the projected orthgonaly into 3d, and the perspective projection into 2d. All using math, no D3D or OPENGL mode for this. The screen blur is also fun. Try using the up and down arrows to change the noise of the edges. It's a neat effect.
+
+tunnel:
+A standard oldschool demoscene effect that I love to recreate. The entire tunnel is "raytraced" during setup and then some fun hacks are used to fake the motion. One of my fav effects.
