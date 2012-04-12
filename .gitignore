@@ -1,0 +1,7 @@
+#compiled stuff#
+*.o
+*.jar
+*.exe
+*.class
+*.so
+*.dll
