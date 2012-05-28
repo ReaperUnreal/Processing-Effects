@@ -4,10 +4,13 @@ float[] p1;
 float[] p2;
 float[] d;
 
-int show;
+int show = 2;
 
-float t;
-float dt;
+float t = 0;
+float dt = 0.02f;
+
+float thresh = 0.2f;
+boolean enableThresholding = false;
 
 void keyPressed() {
   if(keyCode == UP)
@@ -15,6 +18,15 @@ void keyPressed() {
   if(keyCode == DOWN)
     show--;
   show = constrain(show, 0, 2);
+  
+  if(key == 't')
+    enableThresholding = !enableThresholding;
+  
+  if(keyCode == RIGHT)
+    thresh += 0.1f;
+  if(keyCode == LEFT)
+    thresh -= 0.1f;
+  thresh = constrain(thresh, 0.0f, 1.0f);
 }
  
 void clearImage(PImage img) {
@@ -65,20 +77,26 @@ void setup() {
     frameRate(30);
     img = createImage(width, height, RGB);
     clearImage(img);
-    
-    show = 0;
-    
-    t = 0;
-    dt = 0.02;
 } 
 
 void drawcloud(float[] pix) {
   img.loadPixels();
   
   int len = img.pixels.length;
-  for(int i = 0; i < len; i++) {
-    //copy as grayscale
-    img.pixels[i] = color(pix[i] * 255);
+  if(enableThresholding) {
+    for(int i = 0; i < len; i++) {
+      //makes most sense to put the threshold step here
+      if(pix[i] < thresh)
+        img.pixels[i] = color(0);
+      else
+        img.pixels[i] = color(255);
+    }
+  }
+  else {
+    for(int i = 0; i < len; i++) {
+      //copy as grayscale
+      img.pixels[i] = color(pix[i] * 255);
+    }
   }
   
   //copy image to screen
