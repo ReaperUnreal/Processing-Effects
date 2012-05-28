@@ -5,3 +5,6 @@ This is a unit hypercube rotating on 4 different axes, which is the projected or
 
 tunnel:
 A standard oldschool demoscene effect that I love to recreate. The entire tunnel is "raytraced" during setup and then some fun hacks are used to fake the motion. One of my fav effects.
+
+diffcloud:
+Always wondered how that difference cloud algorithm worked in Photoshop. Turns out it's aptly named. It's the absolute difference of two perlin clouds, or rather the current image and a perlin cloud. I animated this one for fun. Good fun. Kinda slow though, it's begging for SIMD.
