@@ -8,3 +8,6 @@ A standard oldschool demoscene effect that I love to recreate. The entire tunnel
 
 diffcloud:
 Always wondered how that difference cloud algorithm worked in Photoshop. Turns out it's aptly named. It's the absolute difference of two perlin clouds, or rather the current image and a perlin cloud. I animated this one for fun. Good fun. Kinda slow though, it's begging for SIMD.
+
+plasma:
+One of my favourite effects, applying a sin map to a palette and some low octave noise can work magic. And when you threshold it, BOOM! plasma worms. Fun times.
